@@ -1,0 +1,1470 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.0, mkdocs-material-8.3.9" name="generator"/>
+<title>单周期cpu - obsidian-mkdocs template</title>
+<link href="../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              单周期cpu
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Obsidian Notes
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Features" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/LaTeX%20Math%20Support/">
+        LaTeX Math Support
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/Mermaid%20Diagrams/">
+        Mermaid diagrams
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/Text%20Formatting/">
+        Text Formatting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Topic 1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Topic 1" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Topic 1
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%201/">
+        Note 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%202/">
+        Note 2
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Ysyx
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Ysyx" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Ysyx
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../RISCV64%20%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/">
+        指令类型与寄存器
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../verilator/">
+        Verilator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF%E9%A2%84%E5%AD%A6%E4%B9%A0/">
+        一生一芯预学习
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          单周期cpu
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        单周期cpu
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    测试
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    译码模块
+  </a>
+<nav aria-label="译码模块" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    行为建模方式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    模板匹配方式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    逐层分析方式
+  </a>
+<nav aria-label="逐层分析方式" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opcode">
+    第一步：分解 opcode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    第二部：确定每条指令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    第三步：生成控制信号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    优点
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu">
+    ALU设计
+  </a>
+<nav aria-label="ALU设计" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    加法器与减法器
+  </a>
+<nav aria-label="加法器与减法器" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    本次目标
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    标志位生成
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    条件转移指令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    逻辑移位与算数移位
+  </a>
+<nav aria-label="逻辑移位与算数移位" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    位颠倒设计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    移位器设计
+  </a>
+<nav aria-label="移位器设计" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#case">
+    简单粗暴的case语句
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    全部转换为左移操作
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    执行模块
+  </a>
+<nav aria-label="执行模块" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu_1">
+    ALU需要实现的操作
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu_2">
+    ALU 输出
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu_3">
+    ALU输入
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    回写模块
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npchalt">
+    为NPC添加halt
+  </a>
+<nav aria-label="为NPC添加halt" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#halt">
+    定位 halt 函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#halt-ebreak">
+    实现 halt 函数 ebreak
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npchit-goodbad-trap">
+    为NPC实现HIT GOOD/BAD TRAP
+  </a>
+<nav aria-label="为NPC实现HIT GOOD/BAD TRAP" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nemu-hit-goodbad-trap">
+    nemu 中的 HIT GOOD/BAD TRAP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc-hit-goodbad-trap">
+    为 npc 添加HIT GOOD/BAD TRAP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ebreak">
+    通过 ebreak 指令通知仿真结束
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hit-goodbad-trap">
+    添加 HIT GOOD/BAD TRAP
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc-nemu">
+    为 npc 添加类似 nemu 的命令行交互界面
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc">
+    为 npc 添加命令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc-difftest">
+    为 npc 添加 difftest
+  </a>
+<nav aria-label="为 npc 添加 difftest" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linux">
+    Linux 动态链接库编程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nemu-refc">
+    完善 nemu 的 ref.c
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc-difftest_1">
+    完善 npc 仿真端的 difftest
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    移植中的注意事项
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%A6%82%E4%BD%95%E6%8F%90%E9%97%AE/">
+        读后感
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    测试
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    译码模块
+  </a>
+<nav aria-label="译码模块" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    行为建模方式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    模板匹配方式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    逐层分析方式
+  </a>
+<nav aria-label="逐层分析方式" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opcode">
+    第一步：分解 opcode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    第二部：确定每条指令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    第三步：生成控制信号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    优点
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu">
+    ALU设计
+  </a>
+<nav aria-label="ALU设计" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    加法器与减法器
+  </a>
+<nav aria-label="加法器与减法器" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    本次目标
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    标志位生成
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    条件转移指令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    逻辑移位与算数移位
+  </a>
+<nav aria-label="逻辑移位与算数移位" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    位颠倒设计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    移位器设计
+  </a>
+<nav aria-label="移位器设计" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#case">
+    简单粗暴的case语句
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    全部转换为左移操作
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    执行模块
+  </a>
+<nav aria-label="执行模块" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu_1">
+    ALU需要实现的操作
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu_2">
+    ALU 输出
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu_3">
+    ALU输入
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    回写模块
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npchalt">
+    为NPC添加halt
+  </a>
+<nav aria-label="为NPC添加halt" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#halt">
+    定位 halt 函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#halt-ebreak">
+    实现 halt 函数 ebreak
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npchit-goodbad-trap">
+    为NPC实现HIT GOOD/BAD TRAP
+  </a>
+<nav aria-label="为NPC实现HIT GOOD/BAD TRAP" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nemu-hit-goodbad-trap">
+    nemu 中的 HIT GOOD/BAD TRAP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc-hit-goodbad-trap">
+    为 npc 添加HIT GOOD/BAD TRAP
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ebreak">
+    通过 ebreak 指令通知仿真结束
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hit-goodbad-trap">
+    添加 HIT GOOD/BAD TRAP
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc-nemu">
+    为 npc 添加类似 nemu 的命令行交互界面
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc">
+    为 npc 添加命令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc-difftest">
+    为 npc 添加 difftest
+  </a>
+<nav aria-label="为 npc 添加 difftest" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linux">
+    Linux 动态链接库编程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nemu-refc">
+    完善 nemu 的 ref.c
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#npc-difftest_1">
+    完善 npc 仿真端的 difftest
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    移植中的注意事项
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>单周期cpu</h1>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220705183402.png"/>
+单周期
++ pc
+地址自增、跳转、暂停、时序逻辑电路
+<a href="https://inst.eecs.berkeley.edu/~cs61c/fa14/lec/">Index of /~cs61c/fa14/lec (berkeley.edu)</a>
+<a href="https://ibex-core.readthedocs.io/en/latest/index.html">Ibex: An embedded 32 bit RISC-V CPU core — Ibex Documentation 0.1.dev50+g5c49fad.d20220629 documentation (ibex-core.readthedocs.io)</a>
+<a href="https://github.com/ultraembedded/riscv/blob/master/core/riscv/riscv_decoder.v">riscv/riscv_decoder.v at master · ultraembedded/riscv (github.com)</a></p>
+<h2 id="_1">测试<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>寄存器读写</li>
+<li>译码指令是否正确</li>
+<li>ALU功能的测试</li>
+</ul>
+<h2 id="_2">译码模块<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>译码模块说简单也简单说复杂也复杂，这几天我查询了很多资料，参考了许多开源CPU译码模块的设计，想找出比较好译码的方式</p>
+</blockquote>
+<h3 id="_3">行为建模方式<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>这种译码方式最为直接明了，直接采用 case 语句，对不同的 opcode 进行分支处理，在每一条分支后面进行 alu 运算单元的信号处理等等。
+主要参考代码：<a href="https://github.com/lowRISC/ibex/blob/master/rtl/ibex_decoder.sv">ibex/ibex_decoder.sv at master · lowRISC/ibex (github.com)</a>
+<a href="https://gitee.com/liangkangnan/tinyriscv">tinyriscv: 一个从零开始写的极简、非常易懂的RISC-V处理器核。 (gitee.com)</a></p>
+</blockquote>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707134627.png"/>
+可以从上图看到，这种译码方式编写起来很简单，只要不断的往下加分支就行了，但在代码可读性上就差很多，需要深入每一条指令才能理解代码。面积优化也不够好。</p>
+<h3 id="_4">模板匹配方式<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>这种译码方式比行为建模要优雅，可读性也比较好。每条指令的 opcode、fun3、fun7 都是固定的，可以为每条指令创建一个 mask，用 inst&amp;mast 就可以判断当前指令属于哪一条指令。与 pa 中 nemu 解析指令的方式一样。
+主要参考代码：<a href="https://github.com/ultraembedded/riscv/blob/master/core/riscv/riscv_decoder.v">riscv/riscv_decoder.v at master · ultraembedded/riscv (github.com)</a></p>
+</blockquote>
+<p><code>nemu</code> 中指令解析方式如下
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707135451.png"/></p>
+<p>参考的 <code>riscv</code> 设计中的 <code>decoder</code> 模块如下
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707135814.png"/>
+可以看到 <code>exec_o</code> 控制信号由指令 <code>ANDI</code>、<code>ADDI</code> 等生成，采用了一个或逻辑。简洁明了。
+<div class="highlight"><pre><span></span><code><span class="c1">// andi</span>
+<span class="cp">`define INST_ANDI 32'h7013      </span><span class="c1">//指令</span>
+<span class="cp">`define INST_ANDI_MASK 32'h707f </span><span class="c1">//指令mask</span>
+</code></pre></div>
+这样的设计方式，添加一条指令十分的方便，只需要设计对应的 <code>mask</code> 就行了，和 <code>nemu</code> 是一模一样的。但缺点也十分明显，这样子是否资源消耗太大了呢？</p>
+<h3 id="_5">逐层分析方式<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>说实话这个名称是我自己瞎编的，因为我不太清楚用什么去描述。早些时候在群里看见有人在讨论 <code>蜂鸟e203</code> 的设计方式，最近去了解了一下。最开始在 <code>github</code> 上看见它的 <code>decoder</code> 的设计方式时，确实被惊艳到了，基本是按照手册设计出来的，很细节，和其他方式都不一样。
+主要参考代码：<a href="https://github.com/riscv-mcu/e203_hbirdv2/blob/master/rtl/e203/core/e203_exu_decode.v">e203_hbirdv2/e203_exu_decode.v at master · riscv-mcu/e203_hbirdv2 (github.com)</a></p>
+</blockquote>
+<p>花了一天读完了的该 <code>riscv</code> 设计的配套书籍 <code>手把手教你设计CPU——RISC-V处理器篇</code> 想深入了解一下 <code>decoder</code> 的设方式，发现介绍的很少。没办法，只能去研究源码。</p>
+<h4 id="opcode">第一步：分解 opcode<a class="headerlink" href="#opcode" title="Permanent link">¶</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w">  </span><span class="n">opcode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_instr</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_1_0_00</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">2</span><span class="mb">'b00</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_1_0_01</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">2</span><span class="mb">'b01</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_1_0_10</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">2</span><span class="mb">'b10</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">2</span><span class="mb">'b11</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// We generate the signals and reused them as much as possible to save gatecounts</span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_4_2_000</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">3</span><span class="mb">'b000</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_4_2_001</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">3</span><span class="mb">'b001</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_4_2_010</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">3</span><span class="mb">'b010</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_4_2_011</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">3</span><span class="mb">'b011</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_4_2_100</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">3</span><span class="mb">'b100</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_4_2_101</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">3</span><span class="mb">'b101</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_4_2_110</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">3</span><span class="mb">'b110</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_4_2_111</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">3</span><span class="mb">'b111</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_6_5_00</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">5</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">2</span><span class="mb">'b00</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_6_5_01</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">5</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">2</span><span class="mb">'b01</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_6_5_10</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">5</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">2</span><span class="mb">'b10</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">opcode_6_5_11</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">5</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">2</span><span class="mb">'b11</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+可以看到，他将 <code>opcdoe</code> 各个位的情况直接枚举出来了，用 <code>wire</code> 信号线表示是否出现了对应信号。从 <code>riscv</code> 手册得知，<code>opcode</code> 的低两位一定是 <code>11</code> ，<code>opcode[6:5]</code> 与 <code>opcode[4:2]</code> 的不同排列组合表示不同的指令类型。如下图：
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707142054.png"/>
+在代码中分别指令类型具体操作如下
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_nmadd</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_011</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_jal</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_11</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_011</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_op_imm</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_00</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_100</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_01</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_100</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_op_fp</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_100</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_system</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_11</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_100</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_auipc</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_00</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_101</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_lui</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_01</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_101</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_resved1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_101</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_resved2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_11</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_101</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_op_imm_32</span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_00</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_110</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_op_32</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_01</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_110</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_custom2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_110</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"> </span>
+</code></pre></div>
+基本就是按照上面的表格进行操作的，不断的重复利用刚刚的信号线，可以节省资源。如果在每一步都行比较操作 ，如下：
+<div class="highlight"><pre><span></span><code><span class="c1">//先比较再使用</span>
+<span class="kt">wire</span><span class="w"> </span><span class="n">rv32_op_imm</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">opcode_6_5_00</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_4_2_100</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode_1_0_11</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//使用时再比较</span>
+<span class="kt">wire</span><span class="w"> </span><span class="n">rv32_op_imm</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">opcode</span><span class="p">[</span><span class="mh">6</span><span class="o">:</span><span class="mh">5</span><span class="p">]</span><span class="o">==</span><span class="mh">2</span><span class="mb">'b00</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">2</span><span class="p">]</span><span class="o">==</span><span class="mh">3</span><span class="mb">'b100</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode</span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="o">==</span><span class="mh">2</span><span class="mb">'b00</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+按照道理来说，确实第一种方式可以节省一些比较器，但在综合时，两者是否相同就不清楚了。</p>
+<h4 id="_6">第二部：确定每条指令<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<p><code>func7</code> <code>func3</code> 也和 <code>opcode</code> 同样被分解了，可以很方便的确认是哪一条指令。
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_add</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_000</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0000000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_sub</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_000</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0100000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_sll</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_001</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0000000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_slt</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_010</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0000000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_sltu</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_011</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0000000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_xor</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_100</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0000000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_srl</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_101</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0000000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_sra</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_101</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0100000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_or</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_110</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0000000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">rv32_and</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">rv32_op</span><span class="w">     </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func3_111</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rv32_func7_0000000</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+如上所示，每条指令都有一条单独的信号线 <code>wire</code> ，为 <code>1</code> 时，代表为当前指令。也都是按照手册一步步分析的。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707144203.png"/></p>
+<h4 id="_7">第三步：生成控制信号<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<p>在第二步中确定了指令，接下来就是根据每条指令生成相对于的控制信号了，有些指令的控制信号可以合并。源码中的控制信号比较复杂，不太容易看懂。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707144522.png"/>
+不过没关系，我们不需要深入理解，了解一下译码思路就行了，控制信号可以自己自定义。</p>
+<h4 id="_8">优点<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<p>初看 <code>decoder</code> 的代码其实会一脸茫然，不知道在干什么，没有上面两种好懂。但其实对着手册去理解，会发现这个译码思路基本是按照 <code>riscv手册</code> 来的。明白了流程以后十分清晰明了，添加指令也很简单。其实这种译码方式很像第一种行为建模方式，也是看 <code>opcode</code> <code>func3</code> <code>func7</code> 但更加的优雅简洁，代码易懂。只使用到了 <code>assign</code> 语句，利于了解综合后的电路结构。</p>
+<h2 id="alu">ALU设计<a class="headerlink" href="#alu" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><a href="https://web.cse.ohio-state.edu/~teodorescu.1/download/teaching/cse675.au08/">Index of /~teodorescu.1/download/teaching/cse675.au08 (ohio-state.edu)</a></p>
+</blockquote>
+<h4 id="_9">加法器与减法器<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>verilog 中其实以及内置了 + - 等基础运算方式。</p>
+</blockquote>
+<ol>
+<li>内置的 + -  * / 运算
+这个我查了一下资料，如果是部署在 <code>fpga</code> 上面，<code>fpga</code> 一般都会有 <code>加法器</code> <code>乘法器</code> 等资源，会直接使用这上面的资源。但如果没有呢？会被综合成上面样子呢？这个我找了找资料最后也不太清楚。</li>
+<li>串行进位加法器
+这个学过数电的都做过实验</li>
+<li>超前进位加法
+这个资料也很多，不过位数过高后，耗费的逻辑资源是很多的。</li>
+<li>减法器
+在硬件层面，减法都是用加法来实现的，不多介绍</li>
+</ol>
+<h5 id="_10">本次目标<a class="headerlink" href="#_10" title="Permanent link">¶</a></h5>
+<ol>
+<li>只用一个加法器实现无符号数和有符号数的加减运算</li>
+<li>将比较运算用减法加标志位实现</li>
+<li>加法器用内置的 <code>+</code> ，乘法器用内置的 <code>*</code> ，除法器用内置的 <code>/</code> ，后续有时间可以在来研究和替换。</li>
+</ol>
+<h3 id="_11">标志位生成<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707222951.png"/></p>
+<h3 id="_12">条件转移指令<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<p><a href="https://www.baike.com/wikiid/6848039267466467421?from=wiki_content&amp;prd=innerlink&amp;view_id=2fvcjoeriysk00">条件转移指令 - 快懂百科 (baike.com)</a>
+<a href="https://ee.usc.edu/~redekopp/cs356/slides/CS356Unit5_x86_Control">x86 Control Flow (usc.edu)</a>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707223851.png"/>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220707224732.png"/></p>
+<ul>
+<li>加法器</li>
+<li>减法器，通过加法实现</li>
+<li>移位器</li>
+<li>比较运算，通过加法和比较实现</li>
+<li>异或</li>
+<li>与</li>
+<li>或</li>
+</ul>
+<h3 id="_13">逻辑移位与算数移位<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<h4 id="_14">位颠倒设计<a class="headerlink" href="#_14" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>采用 <code>for</code> 循环参数化方式
+<div class="highlight"><pre><span></span><code><span class="k">module</span><span class="w"> </span><span class="n">test_invert</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="p">[</span><span class="mh">16</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="p">[</span><span class="mh">16</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">out</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">invertTem</span><span class="w"> </span><span class="p">#(</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="n">DATA_LEN</span><span class="p">(</span><span class="mh">16</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="n">u_invertTem</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="n">in</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
+<span class="k">endmodule</span><span class="w"></span>
+
+<span class="k">module</span><span class="w"> </span><span class="n">invertTem</span><span class="w"> </span><span class="p">#(</span><span class="w"></span>
+<span class="w">    </span><span class="n">DATA_LEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="p">[</span><span class="n">DATA_LEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="p">[</span><span class="n">DATA_LEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">out</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">integer</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">DATA_LEN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">1</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span><span class="w"></span>
+<span class="w">      </span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">[</span><span class="n">DATA_LEN</span><span class="o">-</span><span class="mh">1</span><span class="o">-</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+
+<span class="k">endmodule</span><span class="w"></span>
+</code></pre></div>
+综合后电路图如下
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220708170711.png"/></p>
+</li>
+<li>
+<p>采用拼接方式
+<div class="highlight"><pre><span></span><code><span class="k">module</span><span class="w"> </span><span class="n">test_invert</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="p">[</span><span class="mh">16</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="p">[</span><span class="mh">16</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">out</span><span class="w"></span>
+
+<span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">00</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">01</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">02</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">03</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">04</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">05</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">06</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">07</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">08</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">09</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">10</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">11</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">12</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">13</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">14</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="p">[</span><span class="mh">15</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="k">endmodule</span><span class="w"></span>
+</code></pre></div>
+综合后电路图：
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220708170129.png"/>
+总结</p>
+</li>
+<li>第一种方式省资源，但操作复杂</li>
+<li>第二章方式多了一个 <code>i</code> ，但利用参数化操作，很方便。</li>
+</ul>
+<h4 id="_15">移位器设计<a class="headerlink" href="#_15" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>最近在看ALU的底层设计方式，详细看了龙芯出品的《计算机系统结构基础》，在这里面说在设计移位器的时候，可以用左移代替右移，以节省硬件资源。</p>
+</blockquote>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220708215130.png"/>
+看见上面那段话，我仔细思考了一下。将逻辑右移转换为逻辑左移需要两次位颠倒操作，这个可以解决。那么如何将算数右移转换为左移呢？这个我自己也想了一段时间，能力有限。就去研究其他开源处理器如何实现ALU操作的。</p>
+<h5 id="case">简单粗暴的case语句<a class="headerlink" href="#case" title="Permanent link">¶</a></h5>
+<blockquote>
+<p>直接为每一种移位操作设计一个操作，<code>&lt;&lt;</code> <code>&gt;&gt;</code> ，实现移位操作</p>
+</blockquote>
+<p>这个方法显然简单粗暴，可靠性高但不是我想要的。</p>
+<h5 id="_16">全部转换为左移操作<a class="headerlink" href="#_16" title="Permanent link">¶</a></h5>
+<blockquote>
+<p>我在研究蜂鸟e203 alu 设计的时候，发现了这种巧妙的移位器设计方法。</p>
+</blockquote>
+<p><code>蜂鸟e203</code> 上面很多模块的设计方法都很厉害，它的 <code>ALU</code> 实现也和我平常学的不同，它设计了一个数据通路，所有的数据计算都是数据通路负责，<code>ALU</code> 只是向数据通路请求数据。这也增加了源码的理解难度，不过我不需要关系这么多，我只需要找他它具体计算的地方就行了。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220708220339.png"/>
+经过一段时间的理解，找了的源码中关于移位器的设计
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="c1">// Impelment the Left-Shifter</span>
+<span class="w">  </span><span class="c1">//</span>
+<span class="w">  </span><span class="c1">// The Left-Shifter will be used to handle the shift op</span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">shifter_in1</span><span class="p">;</span><span class="w"> </span><span class="c1">//要移位的数</span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">5</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">shifter_in2</span><span class="p">;</span><span class="w">          </span><span class="c1">//移动次数</span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">shifter_res</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// 是否移位</span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">op_shift</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op_sra</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">op_sll</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">op_srl</span><span class="p">;</span><span class="w"> </span>
+
+<span class="w">     </span><span class="c1">// Make sure to use logic-gating to gateoff the </span>
+
+<span class="w">  </span><span class="cm">/* 将右移动转换为左移 */</span><span class="w"></span>
+<span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">shifter_in1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="no">`E203_XLEN</span><span class="p">{</span><span class="n">op_shift</span><span class="p">}}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"></span>
+<span class="w">          </span><span class="c1">//   In order to save area and just use one left-shifter, we</span>
+<span class="w">          </span><span class="c1">//   convert the right-shift op into left-shift operation</span>
+<span class="w">           </span><span class="p">(</span><span class="w"></span>
+<span class="w">               </span><span class="p">(</span><span class="n">op_sra</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">op_srl</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span>
+<span class="w">                 </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">00</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">01</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">02</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">03</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">04</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">05</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">06</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">07</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">08</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">09</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">10</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">11</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">12</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">13</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">14</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">15</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">16</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">17</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">18</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">19</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">20</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">21</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">22</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">23</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">24</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">25</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">26</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">27</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">28</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">29</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">30</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">31</span><span class="p">]</span><span class="w"></span>
+<span class="w">                 </span><span class="p">}</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">shifter_op1</span><span class="w"></span>
+<span class="w">           </span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">shifter_in2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">5</span><span class="p">{</span><span class="n">op_shift</span><span class="p">}}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">shifter_op2</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* 实际左移操作 */</span><span class="w"></span>
+<span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">shifter_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">shifter_in1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">shifter_in2</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* 逻辑移位结果 */</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sll_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shifter_res</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">srl_res</span><span class="w"> </span><span class="o">=</span><span class="w">  </span>
+<span class="w">                 </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">00</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">01</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">02</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">03</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">04</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">05</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">06</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">07</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">08</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">09</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">10</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">11</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">12</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">13</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">14</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">15</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">16</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">17</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">18</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">19</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">20</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">21</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">22</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">23</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">24</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">25</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">26</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">27</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">28</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">29</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">30</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">31</span><span class="p">]</span><span class="w"></span>
+<span class="w">                 </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* 算数右移结果 */</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">eff_mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="p">(</span><span class="no">`E203_XLEN</span><span class="mb">'b0</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">shifter_in2</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sra_res</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">               </span><span class="p">(</span><span class="n">srl_res</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">eff_mask</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">({</span><span class="mh">32</span><span class="p">{</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">31</span><span class="p">]}}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">eff_mask</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
++ 首先最基础的信号
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">shifter_in1</span><span class="p">;</span><span class="w"> </span><span class="c1">//要移位的操作数</span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">5</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">shifter_in2</span><span class="p">;</span><span class="w">          </span><span class="c1">//移动次数</span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">shifter_res</span><span class="p">;</span><span class="w"> </span><span class="c1">//移位后的结果</span>
+<span class="w">  </span><span class="c1">// 是否进行移位操作</span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="n">op_shift</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">op_sra</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">op_sll</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">op_srl</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<code>op_sra</code> <code>op_sll</code> <code>op_srl</code> 分别对应着 <code>算数右移</code> <code>逻辑左移</code> <code>逻辑右移</code> ，因为符号位在最右边，所以没有算数左移。这三个信号由外部给出。
++ 接下来是将右移操作转换为左移。
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cm">/* 将右移动转换为左移 */</span><span class="w"></span>
+<span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">shifter_in1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="no">`E203_XLEN</span><span class="p">{</span><span class="n">op_shift</span><span class="p">}}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"></span>
+<span class="w">          </span><span class="c1">//   In order to save area and just use one left-shifter, we</span>
+<span class="w">          </span><span class="c1">//   convert the right-shift op into left-shift operation</span>
+<span class="w">           </span><span class="p">(</span><span class="w"></span>
+<span class="w">               </span><span class="p">(</span><span class="n">op_sra</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">op_srl</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span>
+<span class="w">                 </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">00</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">01</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">02</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">03</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">04</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">05</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">06</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">07</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">08</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">09</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">10</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">11</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">12</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">13</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">14</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">15</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">16</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">17</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">18</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">19</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">20</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">21</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">22</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">23</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">24</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">25</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">26</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">27</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">28</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">29</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">30</span><span class="p">],</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">31</span><span class="p">]</span><span class="w"></span>
+<span class="w">                 </span><span class="p">}</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">shifter_op1</span><span class="w"></span>
+<span class="w">           </span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+代码的意思也很简单 <code>shifter_op1</code> 是原始要移位的数据，如果是 <code>op_sra</code> 或者 <code>op_srl</code> 就将 <code>shifter_op1</code> 颠倒给 <code>shifter_in1</code>
++ 实际的移位操作
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cm">/* 只有 op_shift 为 1 才移位 */</span><span class="w"></span>
+<span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">shifter_in2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">5</span><span class="p">{</span><span class="n">op_shift</span><span class="p">}}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">shifter_op2</span><span class="p">[</span><span class="mh">4</span><span class="o">:</span><span class="mh">0</span><span class="p">];</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* 实际左移操作 */</span><span class="w"></span>
+<span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">shifter_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">shifter_in1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">shifter_in2</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
++ 移位结果转换
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cm">/* 逻辑左移移位结果 */</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sll_res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shifter_res</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* 逻辑右移结果需要再次颠倒一次，负负得正 */</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">srl_res</span><span class="w"> </span><span class="o">=</span><span class="w">  </span>
+<span class="w">                 </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">00</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">01</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">02</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">03</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">04</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">05</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">06</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">07</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">08</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">09</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">10</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">11</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">12</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">13</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">14</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">15</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">16</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">17</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">18</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">19</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">20</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">21</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">22</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">23</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">24</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">25</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">26</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">27</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">28</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">29</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">30</span><span class="p">],</span><span class="n">shifter_res</span><span class="p">[</span><span class="mh">31</span><span class="p">]</span><span class="w"></span>
+<span class="w">                 </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* 算数右移结果 */</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">eff_mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="p">(</span><span class="no">`E203_XLEN</span><span class="mb">'b0</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">shifter_in2</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="no">`E203_XLEN</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">sra_res</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">               </span><span class="p">(</span><span class="n">srl_res</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">eff_mask</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">({</span><span class="mh">32</span><span class="p">{</span><span class="n">shifter_op1</span><span class="p">[</span><span class="mh">31</span><span class="p">]}}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">eff_mask</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
++ 如何处理算数右移
+这个理解起来还是有一点难度，算数右移是在逻辑右移的结果上进行处理的。
+1. 制作移位掩码 <code>eff_mask</code> ，截取符号位实际个数。
+假如原始操作为 <code>1111_0000</code> 往右移动 <code>2</code> 位，那么逻辑移位结果为 <code>0011_1100</code> ，算数移位结果为 <code>1111_1100</code> 。我们让 <code>1111_1111</code> 也向右逻辑移动两位作为我们的 <code>eff_mask</code> 掩码。<code>0011_1111</code>
+2. 通过掩码补全符号位
+<code>eff_mask &amp; srl_res</code> ，<code>掩码</code> 与上 <code>逻辑右移结果</code> ，创造 <code>算数右移</code> 结果的后半部分 <code>0011_1100</code> ，<code>~eff_mask &amp; 1111_1111</code> 创造符号位的掩码<br/>
+<code>mask2</code> <code>1100_0000</code> ，通过原始输入获得数据的符号位 <code>X</code> 。<code>mask2&amp;XXXX_XXXX</code> 得到 <code>算数右移的前半部分</code> 。将前半部分与后半部分相 <code>与</code> 就得到算数右移最后的结果了。
+整个计算过程还是非常巧妙的，利用移位操作创造掩码，通过掩码得到最后的结果。</p>
+<blockquote>
+<p>[!note]
+11111</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>123123
+123123123
+</code></pre></div>
+<h2 id="_17">执行模块<a class="headerlink" href="#_17" title="Permanent link">¶</a></h2>
+<p>执行模块输入：
+1. rs1_data
+2. rs2_data
+3. rd_data
+4. imm_data
+5. rs1_valid
+6. rs2_valid
+7. rd_valid
+8. imm_valid
+9. 访存读
+10. 访存写
+11. </p>
+<h3 id="alu_1">ALU需要实现的操作<a class="headerlink" href="#alu_1" title="Permanent link">¶</a></h3>
+<ol>
+<li>+</li>
+<li>-</li>
+<li>^</li>
+<li>|</li>
+<li>&amp;</li>
+<li>逻辑左移</li>
+<li>逻辑右移</li>
+<li>算数右移</li>
+<li>&lt;（有符号、无符号）</li>
+<li>==</li>
+<li>！=</li>
+<li>
+<blockquote>
+<p>=(有符号无符号)</p>
+</blockquote>
+</li>
+<li>
+<ul>
+<li>（有符号、无符号）（高32、低32）</li>
+</ul>
+</li>
+<li>\ （有符号、无符号）</li>
+<li>取余数 （有符号无符号）</li>
+</ol>
+<h3 id="alu_2">ALU 输出<a class="headerlink" href="#alu_2" title="Permanent link">¶</a></h3>
+<ol>
+<li>1bit比较输出</li>
+<li>64bit 运算输出</li>
+</ol>
+<h3 id="alu_3">ALU输入<a class="headerlink" href="#alu_3" title="Permanent link">¶</a></h3>
+<ol>
+<li>64bit A操作数</li>
+<li>64bit B操作数</li>
+<li>ALU 操作码</li>
+</ol>
+<h3 id="_18">回写模块<a class="headerlink" href="#_18" title="Permanent link">¶</a></h3>
+<ol>
+<li>rd-idx</li>
+<li>数据输入</li>
+<li></li>
+</ol>
+<h2 id="npchalt">为NPC添加halt<a class="headerlink" href="#npchalt" title="Permanent link">¶</a></h2>
+<h3 id="halt">定位 halt 函数<a class="headerlink" href="#halt" title="Permanent link">¶</a></h3>
+<p>由于vscode跳转错误，找源码找了一段时间。最开始跳转到 <code>am.h</code>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713104847.png"/>
+找了大大概有十分钟才找到正真的 <code>halt</code> 函数，路径为 <code>abstract-machine/am/src/riscv/npc/trm.c</code> ，可以看到是一个 <code>while(1)</code> 死循环.
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713105116.png"/>
+汇编代码也是一个死循环.
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713105200.png"/></p>
+<h3 id="halt-ebreak">实现 halt 函数 ebreak<a class="headerlink" href="#halt-ebreak" title="Permanent link">¶</a></h3>
+<p>为了把 <code>halt</code> 中的 <code>while(1)</code> 改为 <code>ebreak</code> ,说实话确实不知道该怎么办,但 <code>nemu</code> 中已经实现了 <code>ebreak</code> 函数,当然是参考别人的了(<code>cv工程师</code>).经过寻找
+<code>nemu</code> 中难度 <code>halt</code> 函数位于路径 <code>/home/leesum/ysyx-workbench/abstract-machine/am/src/platform/nemu/trm.c</code> .
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713110013.png"/>
+全局搜索 <code>nemu_trap</code> ,在 <code>nemu.h</code> 下找到宏定义.
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713110105.png"/>
+可以看到不同架构下的 <code>trap</code> 函数是不一样的, <code>riscv</code> 使用了内联汇编
+<div class="highlight"><pre><span></span><code><span class="nf">asm</span><span class="w"> </span><span class="no">volatile</span><span class="p">(</span><span class="err">"</span><span class="no">mv</span><span class="w"> </span><span class="no">a0</span><span class="p">,</span><span class="w"> </span><span class="err">%</span><span class="mi">0</span><span class="c1">; ebreak" : :"r"(code))</span>
+</code></pre></div>
+我们直接复制粘贴就好了.
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713110318.png"/>
+再次汇编查看结果
+1. npc 汇编结果
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713110435.png"/>
+2. nemu 汇编结果
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713110524.png"/>
+一模一样,改造完成!!!</p>
+<h2 id="npchit-goodbad-trap">为NPC实现HIT GOOD/BAD TRAP<a class="headerlink" href="#npchit-goodbad-trap" title="Permanent link">¶</a></h2>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713110714.png"/>
+还是老方法,先参考别人的源码,再照着别人的思路实现自己的代码.</p>
+<h3 id="nemu-hit-goodbad-trap">nemu 中的 HIT GOOD/BAD TRAP<a class="headerlink" href="#nemu-hit-goodbad-trap" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>这个我之前做 pa 的时候研究了一下,好像是通过 a0 寄存器的值来判读的.
+1. 找到 ebreak 指令实现细节
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713111032.png"/>
+2. 跟随 <code>NEMUTRAP</code> 层层跳转
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713111312.png"/></p>
+</blockquote>
+<p>最总定位到 <code>set_nemu_state</code> 函数
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713111218.png"/>
+其中 <code>state</code> 为 <code>NEMU_END</code> ; <code>pc</code> 为 <code>s-&gt;pc</code> ; <code>code</code> 为 <code>a0</code> 寄存器的值.
+最终将 <code>a0</code> 寄存器的值赋给了 <code>nemu_state.halt_ret</code>.
+3. 找到最终判断和输出的地方
+上一步找到 <code>nemu_state.halt_ret</code> 后线索就断了,我们全局搜索 <code>HIT GOOD</code> ,最终在 <code>ysyx-workbench/nemu/src/cpu/cpu-exec.c</code> 中找到了相关函数 <code>cpu_exec</code> .其中
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="no">NEMU_ABORT</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Log</span><span class="p">(</span><span class="s">"nemu: %s at pc = "</span><span class="w"> </span><span class="n">FMT_WORD</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="n">nemu_state</span><span class="p">.</span><span class="n">state</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">NEMU_ABORT</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ANSI_FMT</span><span class="p">(</span><span class="s">"ABORT"</span><span class="p">,</span><span class="w"> </span><span class="n">ANSI_FG_RED</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="n">nemu_state</span><span class="p">.</span><span class="n">halt_ret</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ANSI_FMT</span><span class="p">(</span><span class="s">"HIT GOOD TRAP"</span><span class="p">,</span><span class="w"> </span><span class="n">ANSI_FG_GREEN</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ANSI_FMT</span><span class="p">(</span><span class="s">"HIT BAD TRAP"</span><span class="p">,</span><span class="w"> </span><span class="n">ANSI_FG_RED</span><span class="p">))),</span><span class="w"></span>
+<span class="w">      </span><span class="n">nemu_state</span><span class="p">.</span><span class="n">halt_pc</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+说明了具体的逻辑 <code>nemu_state.halt_ret == 0</code> 则 <code>HIT GOOD</code> 否则 <code>HIT BAD TRAP</code> .</p>
+<h3 id="npc-hit-goodbad-trap">为 npc 添加HIT GOOD/BAD TRAP<a class="headerlink" href="#npc-hit-goodbad-trap" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>[!hint]</p>
+<p>具体思路参考上面的 nemu 方式就行了,在执行到 <code>ebreak</code> 指令时,读取一下 <code>a0</code> 寄存器器的值.</p>
+</blockquote>
+<h3 id="ebreak">通过 ebreak 指令通知仿真结束<a class="headerlink" href="#ebreak" title="Permanent link">¶</a></h3>
+<p><code>verilog</code> 实现方法如下
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713112607.png"/>
+在执行的时候,如果指令时 <code>ebreak</code> ,直接调用结束函数 <code>finish</code> .
+<code>cpp</code> 实现方法.
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220713112718.png"/>
+很简单,不多说.</p>
+<h3 id="hit-goodbad-trap">添加 HIT GOOD/BAD TRAP<a class="headerlink" href="#hit-goodbad-trap" title="Permanent link">¶</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">top</span><span class="o">-&gt;</span><span class="n">contextp</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">gotFinish</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">mysim</span><span class="p">.</span><span class="n">stepCycle</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// 仿真结束时,会跳到这里来,在这里读取 a0 寄存器的值来判断</span>
+<span class="w"> </span>
+</code></pre></div>
+具体实现如下
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Simtop::npcTrap</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">registerfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cpu_gpr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cpu_pc</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">a0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registerfile</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"a0:"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a0</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a0</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"PC:"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">hex</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pc</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\t</span><span class="s">HIT GOOD"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"PC:"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">hex</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pc</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\t</span><span class="s">BAD TRAP"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h2 id="npc-nemu">为 npc 添加类似 nemu 的命令行交互界面<a class="headerlink" href="#npc-nemu" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>[!quote]</p>
+<p>阅读 <code>nemu</code> 的源码后,发现他使用的是 <code>readline</code> 来实现的命令行交互控制.而我使用的是一个 <code>github</code> 上开源库.(基于 <code>readline</code>)
+<a href="https://github.com/Svalorzen/cpp-readline">Svalorzen/cpp-readline: A very simple C++ wrapper for GNU readline. (github.com)</a></p>
+</blockquote>
+<p>使用很简单,看看里面的 <code>example</code> 就行. 需要注意的是,里面内置了退出命令 <code>quit</code> <code>exit</code> . 移植后主函数张这样
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* 不知道为什么将 Simtop mysim 声明为全局变量会崩溃*/</span><span class="w"></span>
+<span class="w">  </span><span class="n">mysim_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">Simtop</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">Vtop</span><span class="o">*</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mysim_p</span><span class="o">-&gt;</span><span class="n">getTop</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="n">mysim_p</span><span class="o">-&gt;</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* 注册命令 */</span><span class="w"></span>
+<span class="w">  </span><span class="n">cr</span><span class="o">::</span><span class="n">Console</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="s">"&gt;:"</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">c</span><span class="p">.</span><span class="n">registerCommand</span><span class="p">(</span><span class="s">"info"</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_info</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">c</span><span class="p">.</span><span class="n">registerCommand</span><span class="p">(</span><span class="s">"x"</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_x</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">c</span><span class="p">.</span><span class="n">registerCommand</span><span class="p">(</span><span class="s">"si"</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_si</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">c</span><span class="p">.</span><span class="n">registerCommand</span><span class="p">(</span><span class="s">"c"</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_c</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">c</span><span class="p">.</span><span class="n">registerCommand</span><span class="p">(</span><span class="s">"p"</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_p</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">c</span><span class="p">.</span><span class="n">registerCommand</span><span class="p">(</span><span class="s">"help"</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_help</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">c</span><span class="p">.</span><span class="n">registerCommand</span><span class="p">(</span><span class="s">"w"</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_w</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">retCode</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">retCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">readLine</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// We can also change the prompt based on last return value:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">retCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ret</span><span class="o">::</span><span class="n">Ok</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">c</span><span class="p">.</span><span class="n">setGreeting</span><span class="p">(</span><span class="s">"&gt;"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">      </span><span class="n">c</span><span class="p">.</span><span class="n">setGreeting</span><span class="p">(</span><span class="s">"!&gt;"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">retCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Received error code 1</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">retCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Received error code 2</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">retCode</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ret</span><span class="o">::</span><span class="n">Quit</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">mysim_p</span><span class="o">-&gt;</span><span class="n">npcTrap</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+<h2 id="npc">为 npc 添加命令<a class="headerlink" href="#npc" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>[!example]</p>
+<p>移植命令行交互界面后,添加命令就和 <code>nemu</code> 差不多了,可以将 <code>nemu</code> 上实现的命令搬过来,但是也需要一些修改.</p>
+</blockquote>
+<h2 id="npc-difftest">为 npc 添加 difftest<a class="headerlink" href="#npc-difftest" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>[!NOTE] 感悟
+由于我 <code>pa</code> 没有做到 <code>difftest</code> 章节,初看源码是有点懵的,但参考了一下别人的实现方式,补充了一下动态链接库的知识后,还是可以理解的.</p>
+</blockquote>
+<h3 id="linux">Linux 动态链接库编程<a class="headerlink" href="#linux" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>[!note]</p>
+<p>动态链接与静态链接在 408 中学过,但也仅仅是学过,一般在编程的时候就是编译的时候加上给 -l 参数,添加一些系统库,也没有深入了解.
+1. 首先我们先将 <code>nemu</code> 编译成动态链接库文件.
+在 <code>build</code> 目录下找到 <code>so</code> 文件.执行命令可以查看链接库里面的函数.
+<div class="highlight"><pre><span></span><code>nm riscv64-nemu-interpreter-so
+</code></pre></div>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220714223748.png"/>
+可以看到确实有我们为 <code>difftest</code> 准备的函数.
+2. 参考 <code>nemu</code> 动态链接库的使用方式
+文件路径 <code>src/cpu/difftest/dut.c</code>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220714223926.png"/>
+首先定义了函数指针,用于后面接收函数.
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220714224036.png"/>
+然后用 <code>dlopen</code> 打开动态链接库 <code>so</code> 文件
+其次用 <code>dlsym</code> 去寻找动态链接库中的函数地址,并用函数指针保存起来.
+最后直接使用函数指针,就可以像普通函数一样使用了.
+[!info] 思考</p>
+<p>可以看到,定义函数指针的时候需要指定函数的参数,返回值等等,这个是和动态链接库中的函数一一对应的,但上面我们用 <code>nm</code> 命令查看函数时,只能看到名字,不能看到参数.一般动态链接库的作者会给你一个 <code>h</code> 文件方便使用.</p>
+</blockquote>
+<h3 id="nemu-refc">完善 nemu 的 ref.c<a class="headerlink" href="#nemu-refc" title="Permanent link">¶</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// 在DUT host memory的`buf`和REF guest memory的`dest`之间拷贝`n`字节,</span>
+
+<span class="c1">// `direction`指定拷贝的方向, `DIFFTEST_TO_DUT`表示往DUT拷贝, `DIFFTEST_TO_REF`表示往REF拷贝</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">difftest_memcpy</span><span class="p">(</span><span class="n">paddr_t</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">direction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* 一个一个字节拷贝,只需要实现 dut-&gt;ref 方向*/</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">direction</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DIFFTEST_TO_REF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">paddr_write</span><span class="p">(</span><span class="n">addr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">((</span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="n">buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// `direction`为`DIFFTEST_TO_DUT`时, 获取REF的寄存器状态到`dut`;</span>
+<span class="c1">// `direction`为`DIFFTEST_TO_REF`时, 设置REF的寄存器状态为`dut`;</span>
+<span class="c1">//riscv64_CPU_state</span>
+<span class="c1">// dut 为一个指针</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">difftest_regcpy</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">dut</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">direction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">CPU_state</span><span class="o">*</span><span class="w"> </span><span class="n">reg_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dut</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">DIFFTEST_TO_REF</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">direction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">cpu</span><span class="p">.</span><span class="n">gpr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg_p</span><span class="o">-&gt;</span><span class="n">gpr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">cpu</span><span class="p">.</span><span class="n">pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg_p</span><span class="o">-&gt;</span><span class="n">pc</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">reg_p</span><span class="o">-&gt;</span><span class="n">gpr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cpu</span><span class="p">.</span><span class="n">gpr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">reg_p</span><span class="o">-&gt;</span><span class="n">pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cpu</span><span class="p">.</span><span class="n">pc</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// 让REF执行`n`条指令</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">difftest_exec</span><span class="p">(</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">cpu_exec</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">difftest_raise_intr</span><span class="p">(</span><span class="n">word_t</span><span class="w"> </span><span class="n">NO</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// 初始化REF的DiffTest功能</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">difftest_init</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* Perform ISA dependent initialization. */</span><span class="w"></span>
+<span class="w">  </span><span class="n">init_isa</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+其中 <code>CPU_state</code> 结构体为
+<div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">word_t</span><span class="w"> </span><span class="n">gpr</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span><span class="w"> </span><span class="c1">// 64位</span>
+<span class="w">  </span><span class="n">vaddr_t</span><span class="w"> </span><span class="n">pc</span><span class="p">;</span><span class="w">     </span><span class="c1">// 64位</span>
+<span class="p">}</span><span class="w"> </span><span class="n">riscv64_CPU_state</span><span class="p">;</span><span class="w"></span>
+</code></pre></div></p>
+<h3 id="npc-difftest_1">完善 npc 仿真端的 difftest<a class="headerlink" href="#npc-difftest_1" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>[!note]</p>
+<p>参考 nemu 中 <code>difftest</code> 的实现方式,我这里创建了一个 <code>difftest</code> 类方便管理</p>
+</blockquote>
+<ol>
+<li>声明函数指针
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220715175744.png"/></li>
+<li>照葫芦画瓢实现 <code>init</code> 函数
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Difftest::init</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">ref_so_file</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">img_size</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">ref_so_file</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">handle</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dlopen</span><span class="p">(</span><span class="n">ref_so_file</span><span class="p">,</span><span class="w"> </span><span class="n">RTLD_LAZY</span><span class="p">)</span><span class="err">`</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">handle</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">diff_memcpy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ref_Difftest_memcpy</span><span class="p">)</span><span class="n">dlsym</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="s">"difftest_memcpy"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">diff_memcpy</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">diff_regcpy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ref_Difftest_regcpy</span><span class="p">)</span><span class="n">dlsym</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="s">"difftest_regcpy"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">diff_regcpy</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">diff_exec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ref_Difftest_exec</span><span class="p">)</span><span class="n">dlsym</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="s">"difftest_exec"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">diff_exec</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">diff_raise_intr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ref_Difftest_raise_intr</span><span class="p">)</span><span class="n">dlsym</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="s">"difftest_raise_intr"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">diff_raise_intr</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">diff_init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ref_difftest_init</span><span class="p">)</span><span class="n">dlsym</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="s">"difftest_init"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">diff_init</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">diff_init</span><span class="p">(</span><span class="n">port</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">membase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mysim_p</span><span class="o">-&gt;</span><span class="n">mem</span><span class="o">-&gt;</span><span class="n">getMEMBASE</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 将程序镜像文件拷贝过去 */</span><span class="w"></span>
+<span class="w">    </span><span class="n">diff_memcpy</span><span class="p">(</span><span class="n">membase</span><span class="p">,</span><span class="w"> </span><span class="n">mysim_p</span><span class="o">-&gt;</span><span class="n">mem</span><span class="o">-&gt;</span><span class="n">guest_to_host</span><span class="p">(</span><span class="n">membase</span><span class="p">),</span><span class="w"> </span><span class="n">img_size</span><span class="p">,</span><span class="w"> </span><span class="n">DIFFTEST_TO_REF</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">CPU_state</span><span class="w"> </span><span class="n">regs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDutregs</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 让 dut 和 ref 寄存器初始值一样 */</span><span class="w"></span>
+<span class="w">    </span><span class="n">diff_regcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">regs</span><span class="p">,</span><span class="w"> </span><span class="n">DIFFTEST_TO_REF</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></li>
+<li>实现 <code>difftest_step</code>
+具体思路就是,让 <code>ref:nemu</code> 执行一次,然后对比 <code>dut</code> <code>ref</code> 的寄存器值,若不同停止执行,并报错.
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Difftest::difftest_step</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 寄存器不一样 */</span><span class="w"></span>
+<span class="w">    </span><span class="n">diff_exec</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">checkregs</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">mysim_p</span><span class="o">-&gt;</span><span class="n">top_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mysim_p</span><span class="o">-&gt;</span><span class="n">TOP_STOP</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></li>
+<li>将 <code>difftest</code> 添加到原始仿真代码中<blockquote>
+<p>[!tip]</p>
+<p>在 <code>npc</code> 执行一条指令后(时钟变化一个周期),调用 <code>difftest_step</code> 让 <code>ref:nemu</code> 也执行一条指令.</p>
+</blockquote>
+</li>
+</ol>
+<p>只需要在具体的执行函数中加上 <code>difftst_step</code> 就行了.</p>
+<h3 id="_19">移植中的注意事项<a class="headerlink" href="#_19" title="Permanent link">¶</a></h3>
+<ol>
+<li><code>nemu</code> 动态库的编译与链接
+按照教程来,会在 <code>build</code> 目录下生成 <code>riscv64-nemu-interpreter-so</code> ,将其重命名为 <code>libnemu.so</code> 并移动到 <code>/lib</code> 目录便于编译器查找与链接.</li>
+<li>为 <code>makefile</code> 文件添加链接库 <code>-lasan -ldl -lnemu</code>
+<div class="highlight"><pre><span></span><code><span class="nv">GCC_LDFLAGS</span> <span class="o">:=</span> -LDFLAGS <span class="s2">"-lasan -lreadline -ldl -lnemu"</span>
+</code></pre></div>
+其中 <code>-lasan</code> 是为了解决报错 <a href="https://github.com/google/sanitizers/issues/796">ASan runtime does not come first in initial library list; you should either link runtime to your application or manually preload it with LD_PRELOAD. · Issue #796 · google/sanitizers (github.com)</a></li>
+<li>注意 <code>difftest</code> 的初始化顺序
+<code>difftest</code> 必须要在 <code>npc</code> <code>reset</code> 后初始化,原因如下:</li>
+<li><code>npc</code> 在没有 <code>reset</code> 时, <code>pc</code> 的值为 0
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220715182122.png"/></li>
+<li><code>difftest</code> 在 <code>init</code> 时,会拷贝 <code>npc</code> 的寄存器组,而我们是通过指针传递的寄存器组文件,初始化的时候为 <code>NULL</code>.</li>
+</ol>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 一生一芯预学习" class="md-footer__link md-footer__link--prev" href="../%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF%E9%A2%84%E5%AD%A6%E4%B9%A0/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              一生一芯预学习
+            </div>
+</div>
+</a>
+<a aria-label="Next: 读后感" class="md-footer__link md-footer__link--next" href="../%E5%A6%82%E4%BD%95%E6%8F%90%E9%97%AE/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              读后感
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1520 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.3.0, mkdocs-material-8.3.9" name="generator"/>
+<title>一生一芯预学习 - obsidian-mkdocs template</title>
+<link href="../../assets/stylesheets/main.1d29e8d0.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              一生一芯预学习
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Obsidian Notes
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Features" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/LaTeX%20Math%20Support/">
+        LaTeX Math Support
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/Mermaid%20Diagrams/">
+        Mermaid diagrams
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/Text%20Formatting/">
+        Text Formatting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          Topic 1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Topic 1" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Topic 1
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%201/">
+        Note 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%202/">
+        Note 2
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Ysyx
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Ysyx" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Ysyx
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../RISCV64%20%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/">
+        指令类型与寄存器
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../verilator/">
+        Verilator
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          一生一芯预学习
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        一生一芯预学习
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    南京大学 “计算机系统基础实验”
+  </a>
+<nav aria-label="南京大学 “计算机系统基础实验”" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pa0">
+    PA0 搭建环境
+  </a>
+<nav aria-label="PA0 搭建环境" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#llvm-11">
+    要求LLVM 环境版本 &gt;= 11
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    优美的退出
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pa1">
+    PA1
+  </a>
+<nav aria-label="PA1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    单步执行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    打印寄存器
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    内存扫描
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    验证单步执行的效果
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    表达式求值
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    表达式生成器
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    利用表达式生成器测试代码
+  </a>
+<nav aria-label="利用表达式生成器测试代码" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    带除法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    不带除法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verilator">
+    搭建verilator仿真环境
+  </a>
+<nav aria-label="搭建verilator仿真环境" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    双控开关
+  </a>
+<nav aria-label="双控开关" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    查看波形数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#makefile">
+    编写 Makefile 实现自动仿真
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    遇到的问题
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvboard">
+    运行 NVBoard 例子
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvboard_1">
+    修改 NVBoard 源码
+  </a>
+<nav aria-label="修改 NVBoard 源码" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    修改显示帧率
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    修改鼠标键盘响应事件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvboard_2">
+    将双控开关接入 NVBoard
+  </a>
+<nav aria-label="将双控开关接入 NVBoard" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#makefile_1">
+    移植Makefile
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lab01switchcpp-nvboard">
+    修改 lab01switch.cpp 接入 NVboard
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    运行效果
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvboard_3">
+    将流水灯接入 NVBoard
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    数电实验
+  </a>
+<nav aria-label="数电实验" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    实验一：二位四选一选择器
+  </a>
+<nav aria-label="实验一：二位四选一选择器" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    实验二： 译码器和编码器
+  </a>
+<nav aria-label="实验二： 译码器和编码器" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yosys">
+    番外篇：开源综合工具 Yosys
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu">
+    实验三 加法器与ALU
+  </a>
+<nav aria-label="实验三 加法器与ALU" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    程序设计思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    实验四 计数器和时钟
+  </a>
+<nav aria-label="实验四 计数器和时钟" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    程序设计思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_30">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_31">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_32">
+    实验六 移位寄存器及桶形移位器
+  </a>
+<nav aria-label="实验六 移位寄存器及桶形移位器" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_33">
+    设计思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_34">
+    代码编写
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ps2">
+    实验七 PS2键盘
+  </a>
+<nav aria-label="实验七 PS2键盘" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_35">
+    程序设计思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_36">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_37">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vga">
+    实验八 实验九 VGA
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%8D%95%E5%91%A8%E6%9C%9Fcpu/">
+        单周期cpu
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%A6%82%E4%BD%95%E6%8F%90%E9%97%AE/">
+        读后感
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    南京大学 “计算机系统基础实验”
+  </a>
+<nav aria-label="南京大学 “计算机系统基础实验”" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pa0">
+    PA0 搭建环境
+  </a>
+<nav aria-label="PA0 搭建环境" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#llvm-11">
+    要求LLVM 环境版本 &gt;= 11
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    优美的退出
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pa1">
+    PA1
+  </a>
+<nav aria-label="PA1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    单步执行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    打印寄存器
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    内存扫描
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    验证单步执行的效果
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    表达式求值
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    表达式生成器
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    利用表达式生成器测试代码
+  </a>
+<nav aria-label="利用表达式生成器测试代码" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    带除法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    不带除法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verilator">
+    搭建verilator仿真环境
+  </a>
+<nav aria-label="搭建verilator仿真环境" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    双控开关
+  </a>
+<nav aria-label="双控开关" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    查看波形数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#makefile">
+    编写 Makefile 实现自动仿真
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    遇到的问题
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvboard">
+    运行 NVBoard 例子
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvboard_1">
+    修改 NVBoard 源码
+  </a>
+<nav aria-label="修改 NVBoard 源码" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    修改显示帧率
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    修改鼠标键盘响应事件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvboard_2">
+    将双控开关接入 NVBoard
+  </a>
+<nav aria-label="将双控开关接入 NVBoard" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#makefile_1">
+    移植Makefile
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lab01switchcpp-nvboard">
+    修改 lab01switch.cpp 接入 NVboard
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    运行效果
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nvboard_3">
+    将流水灯接入 NVBoard
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    数电实验
+  </a>
+<nav aria-label="数电实验" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    实验一：二位四选一选择器
+  </a>
+<nav aria-label="实验一：二位四选一选择器" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    实验二： 译码器和编码器
+  </a>
+<nav aria-label="实验二： 译码器和编码器" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yosys">
+    番外篇：开源综合工具 Yosys
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alu">
+    实验三 加法器与ALU
+  </a>
+<nav aria-label="实验三 加法器与ALU" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    程序设计思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    实验四 计数器和时钟
+  </a>
+<nav aria-label="实验四 计数器和时钟" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    程序设计思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_30">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_31">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_32">
+    实验六 移位寄存器及桶形移位器
+  </a>
+<nav aria-label="实验六 移位寄存器及桶形移位器" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_33">
+    设计思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_34">
+    代码编写
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ps2">
+    实验七 PS2键盘
+  </a>
+<nav aria-label="实验七 PS2键盘" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_35">
+    程序设计思想
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_36">
+    编写代码
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_37">
+    仿真结果
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vga">
+    实验八 实验九 VGA
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>一生一芯预学习</h1>
+<p>[toc]</p>
+<h2 id="_1">南京大学 “计算机系统基础实验”<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><a href="http://static.kancloud.cn/dlover/fpga/1797858">5.9 Verilog开源的综合工具-Yosys · FPGA使用笔记 · 看云 (kancloud.cn)</a></p>
+</blockquote>
+<h3 id="pa0">PA0 搭建环境<a class="headerlink" href="#pa0" title="Permanent link">¶</a></h3>
+<p>虽然说需要使用带GUI的64位Linux
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621131607.png"/>
+但是不想装虚拟机，自己又在阿里云上有一台服务器，并且已经配置好了 <code>X11</code> 转发，就先试试在阿里云服务器上搭建环境，实在不行再切换到本地。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621131810.png"/></p>
+<h4 id="llvm-11">要求LLVM 环境版本 &gt;= 11<a class="headerlink" href="#llvm-11" title="Permanent link">¶</a></h4>
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/102028114">（一）LLVM概述——介绍与安装 - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<p>由于我使用的开发环境是 Ubuntu20.04，通过 <code>APT</code> 安装的 <code>LLVM</code> 的版本号是10。需要自行安装高版本的 <code>LLVM</code> , 参考上述文章。 使用官方安装脚本安装。</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#仅适用于Debian/Ubuntu</span>
+wget https://apt.llvm.org/llvm.sh
+chmod +x llvm.sh
+<span class="c1">#版本号13</span>
+sudo ./llvm.sh <span class="m">13</span> 
+</code></pre></div>
+<p>可以通过以下命令查看 <code>LLVM</code> 的版本。。</p>
+<div class="highlight"><pre><span></span><code>llvm-config --version
+clang -v
+</code></pre></div>
+<p>其中 <code>llvm-config</code> 是一个配置文件，告诉其他软件 <code>llvm</code> 当前的库目录在哪里等等。 <code>clang</code> 就类似于 <code>gcc</code> 。通过上述脚本安装高版本号的 <code>llvm</code> 后。系统中就同时存在 <code>llvm-10</code> <code>llvm-13</code> 。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630221527.png"/>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630221546.png"/>
+其实我们平常输入的命令 <code>gcc</code> 等，很多都是一个软连接，连接到
+正真的程序上，这样可以方便版本的切换和升级。进入 <code>/usr/bin</code> 目录下查看对应关系。</p>
+<div class="highlight"><pre><span></span><code>ls -al <span class="p">|</span> grep llvm
+</code></pre></div>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630222325.png"/>
+都是一些软连接，我们把我们需要的改了就行。 <code>llvm-confg</code> 和 <code>clang</code> 。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630222439.png"/>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630222457.png"/></p>
+<div class="highlight"><pre><span></span><code><span class="c1">##修改软连接命令如下</span>
+
+<span class="c1">##  ln [参数][源文件或目录][目标文件或目录]</span>
+
+ln –snf /var/www/test1 /var/test
+</code></pre></div>
+<p>修改完成后就可以编译成功了。</p>
+<h4 id="_2">优美的退出<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<p>错误代码： <code>make: *** [/home/leesum/ysyx-workbench/nemu/scripts/native.mk:38: run] Error 1</code> 其实看不出什么东西。
+具体在代码中查询<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220628164737.png"/> 返回了 <code>1</code> 。
+最开始我直接粗暴的将 <code>return !good;</code> 改为了 <code>return good;</code> , 收到了变量名的误导。后面深入分析，发现和 <code>nemu_state</code> 有关。阅读源码，在退出命令执行函数上 <code>static int cmd_q(char *args)</code> 改变一下状态就行。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220628165058.png"/></p>
+<h3 id="pa1">PA1<a class="headerlink" href="#pa1" title="Permanent link">¶</a></h3>
+<h4 id="_3">单步执行<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<p>主要是接收一个参数，然后执行 <code>cpu_exec(N)</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">cmd_si</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//默认值 1</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">sscanf</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">N</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">DEBUG_S</span><span class="p">(</span><span class="s">"cpu_exec:%d,</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">cpu_exec</span><span class="p">(</span><span class="n">N</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="_4">打印寄存器<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<p>这个比较简单, 参数获取利用了 <code>sscanf</code> 函数。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">isa_reg_display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 打印寄存器名称和内容 */</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d:%s</span><span class="se">\t</span><span class="s">%lx</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">reg_name</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">),</span><span class="w"> </span><span class="n">gpr</span><span class="p">(</span><span class="n">i</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* pc 寄存器 */</span><span class="w"></span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d:%s</span><span class="se">\t</span><span class="s">%lx</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="s">"pc"</span><span class="p">,</span><span class="w"> </span><span class="n">cpu</span><span class="p">.</span><span class="n">pc</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="_5">内存扫描<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<p>说实话这个也挺简单的，不过我在这上面遇见了一个大坑，耗费了挺久的时间。
+首先利用 <code>sscanf</code> 获取两个参数, <code>%d</code> 可以获取十进制， <code>%x</code> 可以获取十六进制，很智能。</p>
+<div class="highlight"><pre><span></span><code><span class="n">sscanf</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">"%d %x"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">addr</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>然后调用 <code>vaddr_read</code> 读取内存，就可以显示了。是挺简单的，但我就是在显示这一步上遇见了大坑，, 因为是 <code>riscv64</code> ，所以
+最开始我每一次读取 <code>vaddr_read(addr, 8)</code> 8byte。使用 <code>printf</code> 打印数据。</p>
+<div class="highlight"><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">"%016x"</span><span class="p">,</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>将数据和原始数据进行对比，只有低 <code>4byte</code> 是一样的，高 <code>4byte</code> 全是0。然后开始翻源码，在各种地方测试，换成一次读 <code>4byte</code> 就是正确的。经过了一下午的研究，最后觉得打印函数有问题，查找资料才明白 <code>%x</code> 只能输出 <code>4byte</code> 就算 <code>%016x</code> 也只是高位补0而已。这是C语言的一个遗留问题，后面添加了 <code>%p</code> 来解决。
+<a href="https://blog.csdn.net/Onlyone_1314/article/details/120061908">C语言printf函数输出格式%x和%p的差别_大灬白的博客-CSDN博客</a></p>
+<h4 id="_6">验证单步执行的效果<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630225431.png"/></p>
+<blockquote>
+<p>这里说埋了一些坑，但我找了一下午都没有找出来，单步执行的指令也没有问题。</p>
+</blockquote>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630225610.png"/></p>
+<p>pc-&gt;t0
+ <img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630225725.png"/>
+a0写数据
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630225921.png"/>
+内存清数据
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220630230033.png"/></p>
+<h4 id="_7">表达式求值<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>这里我没有用讲义上推荐的方法，因为我学习过中缀表达式求值，很自然的就联想到了一起，因此我在这里使用的是中缀表达式求值方案。并且为了方便，我将中缀表达式求值代码用 cpp 写，只提供一个 c 接口给外部调用。</p>
+</blockquote>
+<h4 id="_8">表达式生成器<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<ol>
+<li>如何确保表达式进行无符号运算
+暂时没有解决</li>
+<li>如何随机插入空格</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">sprintf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="s">"%*d"</span><span class="p">,</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>采用 <code>printf</code> 输出位宽控制来随机插入空格
+3. 如何生成长表达式, 同时不会使<code>buf</code>溢出
+人为控制递归路径， <code>buf</code> 长度超过一定数值不进行递归。</p>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">gen_rand_expr</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">choose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* 表达式长度超过20后，强制选择 0 路线，不进行递归调用 */</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">choose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">choose</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="n">gen_num</span><span class="p">();</span><span class="n">gen_rand_op</span><span class="p">();</span><span class="n">gen_num</span><span class="p">();</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">gen</span><span class="p">(</span><span class="sc">'('</span><span class="p">);</span><span class="w"> </span><span class="n">gen_rand_expr</span><span class="p">();</span><span class="w"> </span><span class="n">gen</span><span class="p">(</span><span class="sc">')'</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">gen_rand_expr</span><span class="p">();</span><span class="w"> </span><span class="n">gen_rand_op</span><span class="p">();</span><span class="w"> </span><span class="n">gen_rand_expr</span><span class="p">();</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>如何过滤求值过程中有除0行为的表达式?
+这个确实挺难的，最开始我一直想在生成表达式的时候直接去除掉除0行为，但试了很久确实做不到。最后想起来了最开始变量 <code>nemu</code> 时， <code>-Werror</code> 将警告转换为错误。一下子豁然开朗。著需要在编译代码时加上 <code>-Werror</code> 将除0警告转换为错误，让编译不通过就行了。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220701234844.png"/></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="cm">/* 添加 Werror 将除0警告转换成错误,导致编译失败*/</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">system</span><span class="p">(</span><span class="s">"gcc -Werror /tmp/.code.c -o /tmp/.expr"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">//printf("错误：-Wdiv-by-zero\r\n");</span>
+<span class="w">      </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="_9">利用表达式生成器测试代码<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220701233455.png"/></p>
+<div class="highlight"><pre><span></span><code><span class="cm">/* 表达式测试 */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">expr_test</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">testinput</span><span class="p">,</span><span class="w"> </span><span class="n">testoutput</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">FILE</span><span class="o">*</span><span class="w"> </span><span class="n">fp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">"/home/leesum/ysyx-workbench/nemu/tools/gen-expr/input"</span><span class="p">,</span><span class="w"> </span><span class="s">"r"</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fp</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Fail to open file!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">//退出程序（结束程序）</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* 读取每一行</span>
+<span class="cm">   * 换行键被坑了</span>
+<span class="cm">   * fgets函数，会默认添加换行\n,导致字符串结尾是 \n\0"</span>
+<span class="cm">   */</span><span class="w"></span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">fgets</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buf</span><span class="p">),</span><span class="w"> </span><span class="n">fp</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strchr</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">);</span><span class="w">  </span><span class="c1">//找出data中的"\n"</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">find</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="o">*</span><span class="n">find</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\0'</span><span class="p">;</span><span class="w">   </span><span class="c1">//替换</span>
+<span class="w">    </span><span class="cm">/* 参考nemu读取命令的代码 */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strtok</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="s">" "</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">DEBUG_M</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">DEBUG_M</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">cmd</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">DEBUG_M</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">testinput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span><span class="c1">//默认结果</span>
+<span class="w">    </span><span class="n">testoutput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expr</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ret</span><span class="p">);</span><span class="c1">//输出结果</span>
+<span class="w">    </span><span class="n">Assert</span><span class="p">(</span><span class="n">testinput</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">testoutput</span><span class="p">,</span><span class="w"> </span><span class="s">"input:%lu,output:%lu"</span><span class="p">,</span><span class="w"> </span><span class="n">testinput</span><span class="p">,</span><span class="w"> </span><span class="n">testoutput</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h5 id="_10">带除法<a class="headerlink" href="#_10" title="Permanent link">¶</a></h5>
+<p>生成一千个带除法的表达式。结果测试，有些能通过，有些通不过。深入分析，发现原因如下。</p>
+<div class="highlight"><pre><span></span><code><span class="mi">9</span><span class="w"> </span><span class="p">((</span><span class="w">  </span><span class="p">(</span><span class="w">  </span><span class="mi">7</span><span class="o">/</span><span class="mi">14</span><span class="o">/</span><span class="w">  </span><span class="mi">4-16</span><span class="w"> </span><span class="p">)</span><span class="o">/</span><span class="w">  </span><span class="mi">3</span><span class="w">  </span><span class="o">+</span><span class="mi">2</span><span class="w">  </span><span class="p">)</span><span class="w">  </span><span class="o">/</span><span class="mi">8</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="mi">16</span><span class="w">  </span><span class="mi">-2</span><span class="w"> </span><span class="o">/</span><span class="w">  </span><span class="mi">6</span><span class="w">  </span><span class="o">*</span><span class="w">  </span><span class="mi">1</span><span class="o">*</span><span class="mi">18</span><span class="o">/</span><span class="w"> </span><span class="mi">11</span><span class="o">*</span><span class="mi">15</span><span class="w"> </span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">14</span><span class="w">  </span><span class="p">)</span><span class="w">  </span><span class="o">+</span><span class="mi">18</span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="mi">4</span><span class="w">  </span><span class="o">/</span><span class="mi">2</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>大多数都有 <code>1/2</code> 类似操作，与 <code>0</code> 相关，由于无符号运算顺序的问题，可能会有舍入</li>
+</ol>
+<h5 id="_11">不带除法<a class="headerlink" href="#_11" title="Permanent link">¶</a></h5>
+<p>全部通过</p>
+<h2 id="verilator">搭建verilator仿真环境<a class="headerlink" href="#verilator" title="Permanent link">¶</a></h2>
+<h3 id="_12">双控开关<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<p>经过阅读 <code>VERILATOR</code> 的官方手册，成功搭建出仿真环境，并且生成了波形 <code>VCD</code> 文件。
+在 <code>ysyx-workbench/npc/csrc</code> 和 <code>/home/leesum/ysyx-workbench/npc/vsrc</code> 下分别创建 <code>lab01switch.cpp</code> <code>lab01switch.v</code> 。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;assert.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;verilated.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Vlab01switch.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"verilated_vcd_c.h"</span><span class="cp"></span>
+<span class="c1">// lab01 开关实验</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">sim_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">999</span><span class="p">;</span><span class="w"> </span><span class="c1">//仿真时间</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">env</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//打开Verilog顶层文件</span>
+<span class="w">    </span><span class="n">VerilatedContext</span><span class="w"> </span><span class="o">*</span><span class="n">contextp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VerilatedContext</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">contextp</span><span class="o">-&gt;</span><span class="n">commandArgs</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Vlab01switch</span><span class="w"> </span><span class="o">*</span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vlab01switch</span><span class="p">{</span><span class="n">contextp</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 记录波形</span>
+<span class="w">    </span><span class="n">Verilated</span><span class="o">::</span><span class="n">traceEverOn</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">VerilatedVcdC</span><span class="w"> </span><span class="o">*</span><span class="n">tfp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VerilatedVcdC</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">top</span><span class="o">-&gt;</span><span class="n">trace</span><span class="p">(</span><span class="n">tfp</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">tfp</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">(</span><span class="s">"1.vcd"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//开始仿真</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">contextp</span><span class="o">-&gt;</span><span class="n">gotFinish</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">contextp</span><span class="o">-&gt;</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">sim_time</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//为顶层模块 a b 添加输入</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">top</span><span class="o">-&gt;</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">top</span><span class="o">-&gt;</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//仿真时间+1</span>
+<span class="w">        </span><span class="n">contextp</span><span class="o">-&gt;</span><span class="n">timeInc</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//开始评估结果</span>
+<span class="w">        </span><span class="n">top</span><span class="o">-&gt;</span><span class="n">eval</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//添加波形数据至 VCD 文件中</span>
+<span class="w">        </span><span class="n">tfp</span><span class="o">-&gt;</span><span class="n">dump</span><span class="p">(</span><span class="n">contextp</span><span class="o">-&gt;</span><span class="n">time</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//打印结果</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"a = %d, b = %d, f = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">top</span><span class="o">-&gt;</span><span class="n">f</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//验证</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">top</span><span class="o">-&gt;</span><span class="n">f</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">top</span><span class="o">-&gt;</span><span class="k">final</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//保存文件</span>
+<span class="w">    </span><span class="n">tfp</span><span class="o">-&gt;</span><span class="n">close</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">top</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">contextp</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// lab01 开关实验</span>
+
+<span class="k">module</span><span class="w"> </span><span class="n">lab01switch</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">assign</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="k">endmodule</span><span class="w"></span>
+</code></pre></div>
+<p>输入命令 <code>verilator -Wall --cc --exe --build ./csrc/lab01switch.cpp ./vsrc/lab01switch.v --trace</code> 编译，并且开启 <code>trace</code></p>
+<p>生成可执行文件后运行如下
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621210704.png"/></p>
+<h4 id="_13">查看波形数据<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<p>并且生成了波形文件 <code>1.vcd</code> ，利用 <code>GTKWave</code> 打开波形数据
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621211113.png"/>
+由于我的实验环境搭建在远端阿里云服务器上面，只能通过 <code>X11</code> 转发显示图形界面，响应速度较慢。可以利用在 <code>Vscode</code> 上安装 <code>WaveTrace</code> 插件查看 <code>VCD</code> 数据文件。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621211435.png"/></p>
+<h4 id="makefile">编写 Makefile 实现自动仿真<a class="headerlink" href="#makefile" title="Permanent link">¶</a></h4>
+<p>由于我之前有过用 <code>Makefile</code> 管理项目的经验，所以这个比较简单
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621213756.png"/>
+以后进行新模块的仿真时，只需要修改 <code>MODULE_NAME</code> 就行了。</p>
+<h4 id="_14">遇到的问题<a class="headerlink" href="#_14" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>include 问题</strong>：<code>VERILATOR</code> 会将用于仿真的 <code>Verilog</code> 文件转换为一个 <code>cpp</code> 文件，并且创建一个类，类的名称为 <code>V&lt;顶层模块的名称&gt;</code> ，而在我们创建的仿真文件中，会 <code>include</code> 这个类，创建顶层文件，进行 <code>input</code> 信号的赋值等等。</li>
+<li><strong>波形文件的问题</strong>：在 <code>VERILATOR</code> 官网文档中，打开的文件如下<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621213334.png"/>
+我按照文档操作，死活生成不了 <code>VCD</code> 文件，这其实是目录关系的问题， <code>open</code> 方法在创建文件时，若目录不存在，不会自己创建目录，就导致不会创建文件，所以在打开、创建文件时，理解各个文件的层次很重要。</li>
+</ol>
+<h3 id="nvboard">运行 NVBoard 例子<a class="headerlink" href="#nvboard" title="Permanent link">¶</a></h3>
+<p>在 NVBoard 根目录设置环境变量 <code>export NVBOARD_HOME=${PWD}</code></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621215451.png"/></p>
+<h3 id="nvboard_1">修改 NVBoard 源码<a class="headerlink" href="#nvboard_1" title="Permanent link">¶</a></h3>
+<p>由于我的环境搭建在远程阿里云服务器上，没有 GUI 界面，我也不想通过远程桌面连接开发，所以只能通过 <code>X11</code> 服务将 <code>NVBoard</code> 的界面转发到本地机器上显示，受制于 <code>X11</code> 转发效率和服务器带宽， <code>NVBoard</code> 几乎成不可用的状态，需要修改源码来满足我的环境需求。</p>
+<h4 id="_15">修改显示帧率<a class="headerlink" href="#_15" title="Permanent link">¶</a></h4>
+<p>阅读源码发现 <code>NVBoard</code> 采用 <code>SDL</code> 进行图形显示，并且默认 <code>FPS</code> 为 60， <code>SDL</code> 画面更新不是采用增量更新，因此每一帧画面都需要经过 <code>X11</code> 的转发，数据量过大，导致我这边本地显示直接卡死，数码管不会动，按钮响应速度也很慢。经过测试将 <code>FPS</code> 修改为 5 后，数码管成功实现自增。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621220258.png"/>
+但鼠标响应事件还是很慢，无法正常使用。</p>
+<h4 id="_16">修改鼠标键盘响应事件<a class="headerlink" href="#_16" title="Permanent link">¶</a></h4>
+<p>阅读源码发现， <code>NVBoard</code> 采用单线程的工作方式，在主函数中不断调用 <code>void nvboard_update()</code> 实现画面的刷新和鼠标键盘的事件读取，并且频率和 <code>FPS</code> 相同。将画面刷新和鼠标事件读取放在同一进程中，无疑会拖慢响应速度，因此我新建一个 <code>SDL线程</code> 用于周期性的读取响应事件，改善代码。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621220844.png"/>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220621220904.png"/></p>
+<p>经过修改后，鼠标事件响应迅速，并且数码管能够自增，虽然由于 <code>X11</code> 转发，帧率只有 5 ，但是已经满足我的需求了。</p>
+<h3 id="nvboard_2">将双控开关接入 NVBoard<a class="headerlink" href="#nvboard_2" title="Permanent link">¶</a></h3>
+<h4 id="makefile_1">移植Makefile<a class="headerlink" href="#makefile_1" title="Permanent link">¶</a></h4>
+<p>首先先将 NVBoard 的 example 的 Makefile 文件移植到我们自己的 Makefile 上，搭建 NVBoard 编译环境。直接将 <code>CTRL A</code> <code>CTRL C</code> <code>CTRL V</code> 复制内容到 <code>npc/Makefile</code> 文件中，然后删除重复的 <code>clean</code> 等操作。
+然后就是不断执行 <code>make</code> 查看报错，参考 <code>example</code> ，该添加文件添加文件，改修改文件修改文件。直到 <code>make</code> 成功无报错。
+1. 在 <code>npc</code> 目录下添加 <code>constr</code> 文件夹，复制 <code>example</code> 的 <code>.nxdc</code> 文件，修改顶层模块名称和自己相匹配，注释掉原先的引脚分配。<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622142649.png"/></p>
+<ol>
+<li>删除 <code>csrc</code> 、<code>vsrc</code> 中原先自带的 <code>.c</code> 和 <code>.v</code> 文件，避免 main 函数冲突。<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622142818.png"/></li>
+<li>修改 <code>Makefile</code> 文件中 <code>TOPNAME</code> 的值，与自己的模块相对应，并且由于原先我们开启了 <code>verilator</code> 的仿真，需要添加 <code>VERILATOR_CFLAGS</code> <code>--trace</code>。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622143138.png"/>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622143150.png"/></li>
+</ol>
+<p>这是基本的修改，更对的修改需要在执行 <code>make</code> 时查看报错信息对症下药。
+所有文件修改完毕后执行 <code>make run</code> 即可看到原先的仿真输出。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622143520.png"/></p>
+<h4 id="lab01switchcpp-nvboard">修改 lab01switch.cpp 接入 NVboard<a class="headerlink" href="#lab01switchcpp-nvboard" title="Permanent link">¶</a></h4>
+<p>首先阅读 <code>example</code> 的源码，发现有个未知的变量，按道理来说， <code>TOP_NAME</code> 应该是 <code>Vtop</code></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622145700.png"/>
+我搜索 <code>TOP_NAME</code> 时，最终在 <code>Makefile</code> 文件中发现了蛛丝马迹。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622150116.png"/>
+直接在编译的时候 <code>define</code> 了 <code>TOP_NAME</code> 。 
+经过摸索，仿照 <code>example</code> 将双控开关接入了 <code>NVboard</code> 主要有两个方面的修改。
+1. 修改 mian 函数，<code>#include &lt;nvboard.h&gt;</code>, 并且将原先的内容注释掉。添加如下<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622170552.png"/>
+其中有几个注意事项， <code>example</code> 中为时序电路，所以它搞了个时钟自增的操作 <code>single_cycle()</code> ，在里面添加仿真 <code>eval()</code> 。而我这个是组合逻辑电路，虽然不用操作模拟时钟，但也需要添加仿真 <code>eval()</code> , 否则开关不会有效果。
+2. 引脚绑定
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622171502.png"/>
+这个很简单，仿照 <code>example</code> 写文件就型了，在这里我将 <code>a</code> 绑定开关0， <code>b</code> 绑定开关1，输出 <code>f</code> 绑定 led0。</p>
+<h4 id="_17">运行效果<a class="headerlink" href="#_17" title="Permanent link">¶</a></h4>
+<p>输入 <code>make run</code> 即可运行。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/2022-06-22%2017-19-37.mp4_20220622_172544.gif"/></p>
+<h4 id="nvboard_3">将流水灯接入 NVBoard<a class="headerlink" href="#nvboard_3" title="Permanent link">¶</a></h4>
+<p>知道套路后就简单许多了主要就是三件事
+1. 修改 <code>Makefile</code>
+2. 创建 <code>.V</code> <code>.cpp</code> 文件
+3. 创建引脚分配文件 <code>.nxdc</code>
+<strong>cpp 文件接入 NVboard</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622184151.png"/>
+<strong>nxdc</strong> 文件绑定引脚
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622184840.png"/>
+RST引脚报错, 采用BTNU引脚代替，找不到原因。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220622184711.png"/>
+<strong>流水灯仿真效果</strong>（缩短了流水灯的间隔时间）
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/quicker_90b1291e-a311-4bed-93ec-97195e0afdc0.Gif"/>
+<strong>复位键仿真效果</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/quicker_a2479cd7-05b8-4a15-93d0-930f782e84ec.Gif"/></p>
+<h2 id="_18">数电实验<a class="headerlink" href="#_18" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><a href="https://nju-projectn.github.io/dlco-lecture-note/exp/01.html">实验一 选择器 — 南京大学 计算机科学与技术系 数字逻辑与计算机组成 课程实验 documentation (nju-projectn.github.io)</a></p>
+</blockquote>
+<h3 id="_19">实验一：二位四选一选择器<a class="headerlink" href="#_19" title="Permanent link">¶</a></h3>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220623174747.png"/></p>
+<h4 id="_20">编写代码<a class="headerlink" href="#_20" title="Permanent link">¶</a></h4>
+<p>依葫芦画瓢， <code>cpp</code> 文件接入 <code>NVboard</code> , <code>V</code> 文件编写顶层模块， <code>NXDC</code> 文件绑定引脚，之后修改 <code>Makefile</code> 文件编译工程。
+<strong>Verilog</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220623175129.png"/>
+<strong>CPP</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220623175204.png"/>
+<strong>NXDC</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220623175221.png"/></p>
+<h4 id="_21">仿真结果<a class="headerlink" href="#_21" title="Permanent link">¶</a></h4>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/quicker_578e6098-517f-41bd-8a7f-0360a030c1cf.Gif"/></p>
+<h3 id="_22">实验二： 译码器和编码器<a class="headerlink" href="#_22" title="Permanent link">¶</a></h3>
+<h4 id="_23">编写代码<a class="headerlink" href="#_23" title="Permanent link">¶</a></h4>
+<p><strong>verilog</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220623231448.png"/>
+<strong>cpp</strong>
+NVboard 接入文件没有改动，直接沿用上一个实验的就可以。
+<strong>引脚绑定</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220623231652.png"/></p>
+<h4 id="_24">仿真结果<a class="headerlink" href="#_24" title="Permanent link">¶</a></h4>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/quicker_fbea1745-1890-482a-9105-1833ede1da0e.Gif"/>
+由于 <code>NVboard</code> 没有告诉我是共阳极还是共阳极数码管，程序逻辑检查了好几遍，导致我在数码管上浪费了一些时间。</p>
+<h3 id="yosys">番外篇：开源综合工具 Yosys<a class="headerlink" href="#yosys" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>在大学的课程中开设过 FPGA 可课程，当时用的 EDA 工具是 Quartus，当写完代码后，可以进行综合，并且可以查看综合后生成的电路图。现在在Linux下用 verilator 仿真，想查看电路图，找了很久，发现了一个开源的综合工具 Yosys</p>
+</blockquote>
+<p>在 <code>ubuntu</code> 下直接使用 <code>apt install yosys</code> 安装。查看使用文档，编写了一个简单了脚本文件，用于生成可视化的电路图。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624141038.png"/>
+运行后会生成 <code>dot</code> 文件，在 <code>vscode</code> 上安装插件 <code>Graphviz Interactive Preview</code> 可以很方便的查看。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220625102031.png"/></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624141318.png"/>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624141350.png"/>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624141413.png"/></p>
+<p><strong>lab03mux41</strong> 用到了一些不支持的语法，没有办法生成图像。</p>
+<h3 id="alu">实验三 加法器与ALU<a class="headerlink" href="#alu" title="Permanent link">¶</a></h3>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624180824.png"/></p>
+<h4 id="_25">程序设计思想<a class="headerlink" href="#_25" title="Permanent link">¶</a></h4>
+<p>在考研的时候学习 <code>计算机组成原理</code> 这门课，也深入了解过 <code>ALU</code> 的设计方法，接下来的代码编写，我仿照经典 <code>ALU</code> 通过设置 <code>PSW</code> 寄存器来实现对溢出、符号等等信息的检测与保存。</p>
+<h4 id="_26">编写代码<a class="headerlink" href="#_26" title="Permanent link">¶</a></h4>
+<p><strong>顶层模块</strong>
+实例化了一个 <code>alu</code> 单元（4位补码）， <code>a</code> 、 <code>b</code> 为输入 <code>out</code> 为输出，并且输出了 <code>PSW</code> 中的 一些寄存器。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624181626.png"/>
+本来还准备将 <code>a</code> <code>b</code> <code>out</code> 显示在数码管上，但是由于涉及到补码的显示，还没有进展，就只显示了 <code>out</code> 的 <code>低3位（0-7）</code> . 
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624181424.png"/></p>
+<p><strong>电路图</strong>：由 <code>yosys</code> 生成
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624182825.png"/></p>
+<p><strong>ALU模块</strong>
+主要思想是，先拿到输入 <code>a</code> 、 <code>b</code> , 同时计算不同操作的结果，最后通过一个选择器，选择需要的结果。主要分为以下几个计算部分。
+1. 补码的加减法，功能覆盖（加法，减法，比较大小，<br/>
+判断相等）
+2. 逻辑运算，所有的逻辑运算都是单独一条线，我没有将其整合，按道理应该还可以简化
+3. 比较大小和判断相等，通过减法和 PSW 寄存器实现。</p>
+<p><a href="https://www.baike.com/wikiid/6848039267466467421?from=wiki_content&amp;prd=innerlink&amp;view_id=48d3e94sz5k000">条件转移指令 - 快懂百科 (baike.com)</a>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624193226.png"/></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624184043.png"/></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624182354.png"/>
+数码管显示
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624184123.png"/></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624182737.png"/>
+<strong>引脚绑定</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624184230.png"/></p>
+<h4 id="_27">仿真结果<a class="headerlink" href="#_27" title="Permanent link">¶</a></h4>
+<p>加法:
+3+1=4，未溢出
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624184353.png"/>
+3+(-7)=-4, 未溢出，其中发生了借位 <code>CF</code> 置1，结果为负数 <code>SF</code> 位置1.
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624184722.png"/>
+减法（判断两个数的大小也是用减法实现的）：
+3-(-7)=10&gt;7，溢出, <code>OF</code> 位置1，<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624184908.png"/>
+0-(-7)=7, 未溢出 <code>OF</code> 位置0
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220624185131.png"/>
+其他的逻辑运算就不放上来了。</p>
+<h3 id="_28">实验四 计数器和时钟<a class="headerlink" href="#_28" title="Permanent link">¶</a></h3>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626145926.png"/></p>
+<h4 id="_29">程序设计思想<a class="headerlink" href="#_29" title="Permanent link">¶</a></h4>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626150639.png"/>
+如何将0-99的值分为十位个位，在一般的语言中直接用除法和取模就行了，在FPGA中也可以用，但设计就不那么优秀，我摸索了一段时间也不知道如何设计。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626151243.png"/></p>
+<h4 id="_30">编写代码<a class="headerlink" href="#_30" title="Permanent link">¶</a></h4>
+<p><strong>顶层模块：</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626150943.png"/>
+<strong>引脚分配</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626151017.png"/></p>
+<h4 id="_31">仿真结果<a class="headerlink" href="#_31" title="Permanent link">¶</a></h4>
+<p>为了演示效果，将计数时钟频率调快了。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/quicker_2ce7f215-cc4c-402a-a4ab-fbcd83900a09.Gif"/></p>
+<h3 id="_32">实验六 移位寄存器及桶形移位器<a class="headerlink" href="#_32" title="Permanent link">¶</a></h3>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626173618.png"/></p>
+<h4 id="_33">设计思想<a class="headerlink" href="#_33" title="Permanent link">¶</a></h4>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626174658.png"/></p>
+<h4 id="_34">代码编写<a class="headerlink" href="#_34" title="Permanent link">¶</a></h4>
+<p><strong>顶层模块：</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626174738.png"/>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626174157.png"/>
+<strong>引脚绑定：</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220626174825.png"/>
+<strong>仿真结果：</strong>
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/quicker_dd4a6890-afa9-4403-8f9c-1e1392c933a7.Gif"/></p>
+<h3 id="ps2">实验七 PS2键盘<a class="headerlink" href="#ps2" title="Permanent link">¶</a></h3>
+<h4 id="_35">程序设计思想<a class="headerlink" href="#_35" title="Permanent link">¶</a></h4>
+<p>利用状态机完成对PS2读时序的同步，通过判断断码来确定一个按键的按下和松开，设置状态位作为数码管的使能控制端，通过捕获使能控制端的下降沿来计算按键的次数。可以看到综合后确实识别出了状态机。
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220627221140.png"/></p>
+<h4 id="_36">编写代码<a class="headerlink" href="#_36" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">module</span><span class="w"> </span><span class="n">lab08keyboard</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">clk</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">rst</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">ps2_clk</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="n">ps2_data</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">output</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">seg1</span><span class="p">,</span><span class="n">seg2</span><span class="p">,</span><span class="n">seg3</span><span class="p">,</span><span class="n">seg4</span><span class="p">,</span><span class="n">seg5</span><span class="p">,</span><span class="n">seg6</span><span class="p">,</span><span class="n">seg7</span><span class="p">,</span><span class="n">seg8</span><span class="w"></span>
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">ps2out</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">23</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">ps2segin</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">reg</span><span class="w"> </span><span class="n">ps2ready</span><span class="p">,</span><span class="n">ps2next</span><span class="p">,</span><span class="n">ps2over</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">ps2_keyboard</span><span class="w"> </span><span class="n">ps2keyboard</span><span class="p">(.</span><span class="n">clk</span><span class="p">(</span><span class="n">clk</span><span class="p">),</span><span class="w"></span>
+<span class="w">                           </span><span class="p">.</span><span class="n">clrn</span><span class="p">(</span><span class="o">~</span><span class="n">rst</span><span class="p">),</span><span class="w"> </span><span class="c1">//低电平复位</span>
+<span class="w">                           </span><span class="p">.</span><span class="n">ps2_clk</span><span class="p">(</span><span class="n">ps2_clk</span><span class="p">),</span><span class="w"></span>
+<span class="w">                           </span><span class="p">.</span><span class="n">ps2_data</span><span class="p">(</span><span class="n">ps2_data</span><span class="p">),</span><span class="w"></span>
+<span class="w">                           </span><span class="p">.</span><span class="n">data</span><span class="p">(</span><span class="n">ps2out</span><span class="p">),</span><span class="w"></span>
+<span class="w">                           </span><span class="p">.</span><span class="n">ready</span><span class="p">(</span><span class="n">ps2ready</span><span class="p">),</span><span class="w"></span>
+<span class="w">                           </span><span class="p">.</span><span class="n">nextdata_n</span><span class="p">(</span><span class="n">ps2next</span><span class="p">),</span><span class="w"></span>
+<span class="w">                           </span><span class="p">.</span><span class="n">overflow</span><span class="p">(</span><span class="n">ps2over</span><span class="p">)</span><span class="w"></span>
+<span class="w">                          </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/***************************三段式状态机*******************************/</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">parameter</span><span class="w"> </span><span class="n">stateRead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mb">'b0001</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">parameter</span><span class="w"> </span><span class="n">stateNotify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mb">'b0010</span><span class="p">;</span><span class="w"> </span><span class="c1">//拉低nextdata_n,通知读取完毕</span>
+<span class="w">  </span><span class="k">parameter</span><span class="w"> </span><span class="n">stateNotify2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mb">'b0100</span><span class="p">;</span><span class="c1">//拉低nextdata_n,通知读取完毕</span>
+<span class="w">  </span><span class="k">parameter</span><span class="w"> </span><span class="n">stateIdle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">4</span><span class="mb">'b1000</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">state_current</span><span class="p">,</span><span class="n">state_next</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//同步状态转移</span>
+<span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">posedge</span><span class="w"> </span><span class="n">rst</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">begin</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rst</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">begin</span><span class="w"></span>
+<span class="w">      </span><span class="n">state_current</span><span class="o">&lt;=</span><span class="n">stateIdle</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="k">begin</span><span class="w"></span>
+<span class="w">      </span><span class="n">state_current</span><span class="o">&lt;=</span><span class="n">state_next</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//异步改变状态</span>
+<span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">begin</span><span class="w"></span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">state_current</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="nl">stateIdle:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">state_next</span><span class="o">=</span><span class="p">(</span><span class="n">ps2ready</span><span class="o">==</span><span class="mh">1</span><span class="mb">'b1</span><span class="p">)</span><span class="o">?</span><span class="nl">stateRead:</span><span class="n">stateIdle</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">      </span><span class="nl">stateRead:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">state_next</span><span class="o">=</span><span class="n">stateNotify</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">      </span><span class="nl">stateNotify:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">state_next</span><span class="o">=</span><span class="n">stateNotify2</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">      </span><span class="nl">stateNotify2:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">state_next</span><span class="o">=</span><span class="n">stateIdle</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">state_next</span><span class="o">=</span><span class="n">stateIdle</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">endcase</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//每个状态的输出</span>
+<span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">begin</span><span class="w"></span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">state_current</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="nl">stateIdle:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">ps2next</span><span class="o">&lt;=</span><span class="mh">1</span><span class="p">;</span><span class="c1">//默认拉高</span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">      </span><span class="nl">stateNotify:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">ps2next</span><span class="o">&lt;=</span><span class="mh">0</span><span class="p">;</span><span class="c1">//总线拉低</span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">      </span><span class="nl">stateNotify2:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">ps2next</span><span class="o">&lt;=</span><span class="mh">0</span><span class="p">;</span><span class="c1">//总线拉低</span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">      </span><span class="nl">stateRead:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">23</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="p">{</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">],</span><span class="n">ps2out</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]};</span><span class="c1">//保存读取的最后三个值</span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">      </span><span class="k">begin</span><span class="w"></span>
+<span class="w">        </span><span class="n">ps2next</span><span class="o">&lt;=</span><span class="mh">1</span><span class="p">;</span><span class="c1">//默认拉高</span>
+<span class="w">      </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="k">endcase</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/*********************************************************************/</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/**</span>
+<span class="cm">  * 如果读取到的最后三个值是 (A,0XF0,A)形式，则是断码，关闭数码管显示</span>
+<span class="cm">  * (eg:有bug,找了很久没有找出来，程序复位时，segen的值是1，不是0</span>
+<span class="cm">  * 经过排查，为 if 语句出错，但找不到原因。)</span>
+<span class="cm">  **/</span><span class="w"></span>
+<span class="w">  </span><span class="kt">reg</span><span class="w"> </span><span class="n">segen</span><span class="w">  </span><span class="p">;</span><span class="w"> </span><span class="c1">//数码管控制端口</span>
+<span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">begin</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">8</span><span class="p">]</span><span class="o">==</span><span class="mh">8'hf0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="o">&amp;&amp;</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="o">==</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">23</span><span class="o">:</span><span class="mh">16</span><span class="p">])</span><span class="w"></span>
+<span class="w">    </span><span class="k">begin</span><span class="w"></span>
+<span class="w">      </span><span class="n">segen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="k">begin</span><span class="w"></span>
+<span class="w">      </span><span class="n">segen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/*当按下键盘时，segen = 1,数码管亮</span>
+<span class="cm">  * 松开键盘时，segen = 0,数码管灭</span>
+<span class="cm">  * 通过捕获 segen 的上升沿，或下降沿，即可获取按下键盘的次数</span>
+<span class="cm">  */</span><span class="w"></span>
+<span class="w">  </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="w"> </span><span class="p">]</span><span class="n">segcountl</span><span class="w"> </span><span class="p">,</span><span class="n">segcounth</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">negedge</span><span class="w"> </span><span class="n">segen</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">begin</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">segcountl</span><span class="o">==</span><span class="mh">4</span><span class="mi">'d9</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">begin</span><span class="w"></span>
+<span class="w">      </span><span class="n">segcounth</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">segcounth</span><span class="w"> </span><span class="o">+</span><span class="mh">4</span><span class="mi">'d1</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">segcountl</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mh">4</span><span class="mi">'d0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="k">begin</span><span class="w"></span>
+<span class="w">      </span><span class="n">segcountl</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">segcountl</span><span class="w"> </span><span class="o">+</span><span class="mh">4</span><span class="mi">'d1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* 键盘扫描码显示 */</span><span class="w"></span>
+<span class="w">  </span><span class="n">seg</span><span class="w"> </span><span class="n">seglow1</span><span class="w"> </span><span class="p">(.</span><span class="n">in</span><span class="p">(</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]),</span><span class="w"> </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">seg1</span><span class="p">),.</span><span class="n">en</span><span class="p">(</span><span class="n">segen</span><span class="w"> </span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="n">seg</span><span class="w"> </span><span class="n">seghigh1</span><span class="w"> </span><span class="p">(.</span><span class="n">in</span><span class="p">(</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">4</span><span class="p">]),</span><span class="w"> </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">seg2</span><span class="p">),.</span><span class="n">en</span><span class="p">(</span><span class="n">segen</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* 键盘 ASCII 码显示 */</span><span class="w"></span>
+<span class="w">  </span><span class="kt">reg</span><span class="w">  </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="n">ascii</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">toASCII</span><span class="w"> </span><span class="n">ps2ascii</span><span class="p">(.</span><span class="n">addr</span><span class="p">(</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]),.</span><span class="n">val</span><span class="p">(</span><span class="n">ascii</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">seg</span><span class="w"> </span><span class="n">seglow2</span><span class="w"> </span><span class="p">(.</span><span class="n">in</span><span class="p">(</span><span class="n">ascii</span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]),</span><span class="w"> </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">seg3</span><span class="p">),.</span><span class="n">en</span><span class="p">(</span><span class="n">segen</span><span class="w"> </span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="n">seg</span><span class="w"> </span><span class="n">seghigh2</span><span class="w"> </span><span class="p">(.</span><span class="n">in</span><span class="p">(</span><span class="n">ascii</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">4</span><span class="p">]),</span><span class="w"> </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">seg4</span><span class="p">),.</span><span class="n">en</span><span class="p">(</span><span class="n">segen</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* 没有用到，不显示 */</span><span class="w"></span>
+<span class="w">  </span><span class="n">seg</span><span class="w"> </span><span class="n">seglow3</span><span class="w"> </span><span class="p">(.</span><span class="n">in</span><span class="p">(</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">19</span><span class="o">:</span><span class="mh">16</span><span class="p">]),</span><span class="w"> </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">seg5</span><span class="p">),.</span><span class="n">en</span><span class="p">(</span><span class="mh">1</span><span class="mi">'d0</span><span class="w"> </span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="n">seg</span><span class="w"> </span><span class="n">seghigh3</span><span class="w"> </span><span class="p">(.</span><span class="n">in</span><span class="p">(</span><span class="n">ps2segin</span><span class="p">[</span><span class="mh">23</span><span class="o">:</span><span class="mh">20</span><span class="p">]),</span><span class="w"> </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">seg6</span><span class="p">),.</span><span class="n">en</span><span class="p">(</span><span class="mh">1</span><span class="mi">'d0</span><span class="w"> </span><span class="p">));</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/* 计数显示 */</span><span class="w"></span>
+<span class="w">  </span><span class="n">seg</span><span class="w"> </span><span class="n">segnuml</span><span class="w"> </span><span class="p">(.</span><span class="n">in</span><span class="p">(</span><span class="n">segcountl</span><span class="p">),</span><span class="w"> </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">seg7</span><span class="p">),.</span><span class="n">en</span><span class="p">(</span><span class="mh">1</span><span class="mi">'d1</span><span class="w"> </span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="n">seg</span><span class="w"> </span><span class="n">seghnumh</span><span class="w"> </span><span class="p">(.</span><span class="n">in</span><span class="p">(</span><span class="n">segcounth</span><span class="p">),</span><span class="w"> </span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">seg8</span><span class="p">),.</span><span class="n">en</span><span class="p">(</span><span class="mh">1</span><span class="mi">'d1</span><span class="p">));</span><span class="w"></span>
+
+<span class="k">endmodule</span><span class="w"></span>
+</code></pre></div>
+<p>引脚绑定
+<img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/20220627192350.png"/></p>
+<h4 id="_37">仿真结果<a class="headerlink" href="#_37" title="Permanent link">¶</a></h4>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/zilongmix/doc/img/quicker_a31e410d-fa6c-44aa-a600-2f25840b2b2b.Gif"/></p>
+<h3 id="vga">实验八 实验九 VGA<a class="headerlink" href="#vga" title="Permanent link">¶</a></h3>
+<p>VGA显示图片位置错乱，没有搞清楚vga分辨率到底是多少，自己生成的640-480 图片大小和原始的大小不一样导致位置错乱。字符输入实验尝试了一下准备放弃、如果要做到的话，感觉就像是软件编程、需要用到大量的行为建模，感觉在写c语言。</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Verilator" class="md-footer__link md-footer__link--prev" href="../verilator/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Verilator
+            </div>
+</div>
+</a>
+<a aria-label="Next: 单周期cpu" class="md-footer__link md-footer__link--next" href="../%E5%8D%95%E5%91%A8%E6%9C%9Fcpu/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              单周期cpu
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
